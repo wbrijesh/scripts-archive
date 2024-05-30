@@ -31,7 +31,7 @@ sudo apt update && sudo apt install -y soft-serve git
 sudo touch /etc/systemd/system/soft-serve.service
 
 # Download and insert contents into the soft-serve service file
-sudo curl -fsSL https://raw.githubusercontent.com/wbrijesh/scripts/main/soft-serve/systemd-service.txt -o /etc/systemd/system/soft-serve.service
+sudo curl -fsSL https://raw.githubusercontent.com/wbrijesh/scripts/main/static/git/soft-serve-systemd-service.txt -o /etc/systemd/system/soft-serve.service
 
 # Replace placeholder with provided ADMIN_KEYS
 sudo sed -i "s/Environment=SOFT_SERVE_INITIAL_ADMIN_KEYS='ssh-ed25519 AAAAC3NzaC1lZDI1...'/Environment=SOFT_SERVE_INITIAL_ADMIN_KEYS='$ADMIN_KEYS'/g" /etc/systemd/system/soft-serve.service
