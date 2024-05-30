@@ -9,8 +9,8 @@ ADMIN_KEYS=$1
 
 sudo apt update
 sudo apt install -y snapd nginx neovim btop neofetch
-sudo snap install --dangerous --classic go
-sudo snap install --dangerous --classic certbot
+sudo snap install --classic go
+sudo snap install --classic certbot
 
 # Create TLS certificate for domain
 sudo /snap/bin/certbot certonly --standalone
